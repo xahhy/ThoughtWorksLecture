@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Title</title>
+    <style>
+        .layout-section {
+            border: #ddd 1px solid;
+            border-radius: 2px;
+            box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.16);
+            margin: 20px 20px;
+        }
+
+        .layout-section > p {
+            width: 30%;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .layout-section > header {
+            background-color: #dddddd;
+            padding: .2rem 1rem;
+            border-bottom: 1px solid transparent;
+        }
+
+        input[type="text"] {
+            height: 1.5rem;
+            padding: 6px 12px;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+            color: #555;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .m-judge-option {
+            font-weight: bold;
+        }
+
+        .m-text-area {
+            width: 95%;
+        }
+
+        .m-submit-section {
+            text-align: center;
+            margin: 30px 20px;
+        }
+
+        .m-submit-btn {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+
+        .m-btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid transparent;
+            padding: 10px 16px;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<form action="#" method="get">
+    <article>
+        <header>
+            <h1 style="text-align: center">统一建模语言理论测试</h1>
+        </header>
+        <section class="layout-section">
+            <p><b>考试科目:</b> 统一建模语言</p>
+            <p><b>时间:</b>100分钟</p>
+            <p><b>得分:</b></p>
+        </section>
+        <section class="layout-section">
+            <p>
+                <label>
+                    <b>班级（必填）:</b>
+                    <input type="text">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <b>学号（必填）:</b>
+                    <input type="text">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <b>姓名（必填）:</b>
+                    <input type="text">
+                </label>
+            </p>
+        </section>
+        <section class="layout-section">
+            <header>
+                <h2>一、填空题（每空5分，共20分）</h2>
+            </header>
+            <ol>
+                <li>
+                    <h4>UML的中文全称是:</h4>
+                    <input type="text" name="1.1">
+                </li>
+                <li>
+                    <h4>对象最突出的特征是:</h4>
+                    <input type="text" name="1.2.1">
+                    <input type="text" name="1.2.2">
+                    <input type="text" name="1.2.3">
+                </li>
+            </ol>
+        </section>
+        <section class="layout-section">
+            <header>
+                <h2>二、选择题（每题10分，共20分）</h2>
+            </header>
+            <ol>
+                <li><h4>UML与软件工程的关系是:</h4>
+                    <div>
+                        <label>
+                            <input type="radio" name="2.1" value="A">
+                            (A) UML就是软件工具
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="2.1" value="B">
+                            (B) UML参与到软件工程中软件开发过程中的几个阶段
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="2.1" value="C">
+                            (C) UML与软件工程无关
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="2.1" value="D">
+                            (D) UML是软件工程的一部分
+                        </label>
+                    </div>
+                </li>
+                <li><h4>Java语言支持:</h4>
+                    <div>
+                        <label>
+                            <input type="radio" name="2.2" value="A">
+                            (A) 单继承
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="2.2" value="B">
+                            (B) 多继承
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="2.2" value="C">
+                            (C) 单继承和多继承都支持
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="2.2" value="D">
+                            (D) 单继承和多继承都不支持
+                        </label>
+                    </div>
+                </li>
+            </ol>
+        </section>
+        <section class="layout-section">
+            <header>
+                <h2>三、多项选择题（每题10分，共20分）</h2>
+            </header>
+            <ol>
+                <li><h4>用例的粒度分为以下哪三种:</h4></li>
+                <div>
+                    <label>
+                        <input type="checkbox" name="3.1" value="A">
+                        (A) 概述级
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="3.1" value="B">
+                        (B) 需求级
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="3.1" value="C">
+                        (C) 用户目标级
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="3.1" value="D">
+                        (D) 子功能级
+                    </label>
+                </div>
+                <li><h4>类图由以下哪三部分组成:</h4></li>
+                <div>
+                    <label>
+                        <input type="checkbox" name="3.2" value="A">
+                        (A) 名称(Name)
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="3.2" value="B">
+                        (B) 属性(Attribute)
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="3.2" value="C">
+                        (C) 操作(Operation)
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="3.2" value="D">
+                        (D) 方法(Function)
+                    </label>
+                </div>
+            </ol>
+        </section>
+        <section class="layout-section">
+            <header><h2>四、判断题（每题10分，共20分）</h2></header>
+            <ol>
+                <li>
+                    <h4>用例图只是用于和客户交流和沟通的,用于确定需求。
+                        <label class="m-judge-option" style="color: green"><input type="radio"
+                                                                                  name="4.1">&#10004</label>
+                        <label class="m-judge-option" style="color: red"><input type="radio" name="4.1">&#10006</label>
+                    </h4>
+                </li>
+                <li>
+                    <h4>在状态图中,终止状态在一个状态图中允许有任意多个。
+                        <label class="m-judge-option" style="color: green"><input type="radio"
+                                                                                  name="4.2">&#10004</label>
+                        <label class="m-judge-option" style="color: red"><input type="radio" name="4.2">&#10006</label>
+                    </h4>
+                </li>
+            </ol>
+        </section>
+        <section class="layout-section">
+            <header><h2>五、简答题（每题20分，共20分）</h2></header>
+            <ol>
+                <li>
+                    <h4>简述什么是模型以及模型的表现形式？</h4>
+                    <label>
+                        <textarea class="m-text-area" name="5.1" cols="30" rows="10"></textarea>
+                    </label>
+                </li>
+            </ol>
+        </section>
+        <section class="m-submit-section">
+            <button class="m-submit-btn m-btn" type="submit">计算分数</button>
+        </section>
+    </article>
+</form>
+</body>
+</html>
