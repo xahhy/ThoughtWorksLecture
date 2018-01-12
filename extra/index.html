@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            line-height: 1.42857143;
+        }
+
+        .nav {
+            height: 100px;
+            min-width: 1600px;
+            background-color: #fcf9f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .nav-logo {
+            height: 100px;
+            display: block;
+            float: left;
+            margin-left: 100px;
+        }
+
+        .navbar-nav {
+            margin: 0;
+            border-left: 1px solid #eae7e2;
+            border-right: 1px solid #eae7e2;
+            float: left;
+            list-style: none;
+            padding: 0;
+        }
+
+        .navbar-nav li {
+            position: relative;
+            display: inline;
+            margin-left: 21px;
+            margin-right: 21px;
+            height: 100px;
+            float: left;
+        }
+
+        .navbar-nav li:first-child {
+            padding-left: 21px;
+        }
+
+        .navbar-nav li:last-child {
+            padding-right: 21px;
+        }
+
+        .navbar-nav li a {
+            font-size: 20px;
+            padding-top: 36px;
+            padding-bottom: 36px;
+            color: #d8d6d5;
+            display: block;
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .grid-wrapper .grid {
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .grid {
+            display: block;
+            padding: 0;
+            margin: 0 -12.5px;
+            letter-spacing: -0.31em;
+            text-rendering: optimizespeed;
+            text-align: center;
+            min-width: 1600px;
+        }
+
+        .grid-cell {
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+            display: inline-block;
+            margin: 0;
+            padding: 0 12.5px;
+            vertical-align: top;
+            text-align: center;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-rendering: auto;
+        }
+
+        .btn-donate {
+            width: 150px;
+            height: 40px;
+            border: 1px solid #dad7d2;
+            background-color: transparent;
+            margin: 30px 36px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .img-hero {
+            background: url(img/hero.png) no-repeat center bottom;
+            background-size: cover;
+            height: 794px;
+            min-width: 1600px;
+            content: "";
+            display: block;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 100px;
+            z-index: -999;
+        }
+
+        .overlay-img {
+            background-color: rgba(255, 255, 255, 0.4);
+            height: 794px;
+            display: block;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 100px;
+            z-index: -1;
+        }
+
+        .btn-large {
+            width: 270px;
+            height: 60px;
+            border-radius: 6px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .header-font {
+            font-family: "Agency FB", cursive;
+        }
+
+        .hero-header {
+            padding-top: 300px;
+            padding-bottom: 50px;
+            color: #ffffff;
+            font-size: 60px;
+            z-index: 1;
+        }
+
+        .btn-student, .btn-tutor {
+            font-family: "Agency FB", cursive;
+            color: #ffffff;
+            margin: 0 15px;
+        }
+
+        .btn-student {
+            background-color: transparent;
+            border: 1px solid #eae7e2;
+        }
+
+        .btn-tutor {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+        }
+
+        /* Mission */
+        .mission-header {
+            padding-top: 150px;
+            font-size: 52px;
+            color: #4d4e59;
+        }
+
+        .mission-content {
+            font-size: 20px;
+            font-family: 'Open Sans', serif;
+            color: #636471;
+            padding: 32px 0;
+        }
+
+        .mission-btn {
+            border: none;
+            background-color: #ffcd62;
+            color: #636471;
+            margin-bottom: 200px;
+        }
+
+        /* Students */
+        .students-header, .partners-header {
+            color: #fcf9f4;
+            font-size: 52px;
+            padding-top: 170px;
+        }
+
+        .students-content, .partners-content {
+            font-size: 20px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            margin-right: 300px;
+            color: #fcf9f4;
+        }
+
+        .students-btn {
+            border: none;
+            background-color: #569480;
+            color: #fcf9f4;
+            margin-bottom: 200px;
+            width: 300px;
+        }
+
+        .students-img, .partners-img {
+            height: 330px;
+            margin-left: 312px;
+            margin-top: 170px;
+            margin-bottom: 170px;
+            margin-right: 138px;
+            float: left;
+        }
+
+        /* Tutors */
+        .tutors-header {
+            color: #fcf9f4;
+            font-size: 52px;
+            padding-top: 170px;
+        }
+
+        .tutors-content {
+            font-size: 20px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            margin-right: 300px;
+            color: #fcf9f4;
+        }
+
+        .tutors-btn {
+            border: none;
+            background-color: #569480;
+            color: #fcf9f4;
+            margin-bottom: 200px;
+            width: 300px;
+        }
+
+        .tutors-img {
+            height: 330px;
+            margin-left: 138px;
+            margin-top: 170px;
+            margin-bottom: 170px;
+            margin-right: 312px;
+            float: right;
+        }
+
+        .tutors-wrapper {
+            margin-left: 312px;
+            text-align: left;
+        }
+
+        /* Partners */
+        .partners-btn {
+            color: #fcf9f4;
+            background-color: #6d91b1;
+            margin-bottom: 200px;
+            width: 300px;
+            border: none;
+        }
+
+        /* Progress */
+        .progress-header {
+            font-size: 52px;
+            padding-top: 170px;
+            padding-bottom: 80px;
+            color: #909094;
+        }
+
+        .progress-cell {
+            height: 350px;
+            width: 368px;
+            border: 1px solid #eeece7;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-bottom: 160px;
+            display: inline-block;
+        }
+
+        .progress-cell-header {
+            font-size: 72px;
+            padding-top: 80px;
+        }
+
+        .progress-cell-content {
+            font-size: 16px;
+            padding-top: 80px;
+            font-weight: bold;
+        }
+        .progress-color-green{
+            color: #91d0b1;
+        }
+        .progress-color-yellow{
+            color: #ffcd62;
+        }
+        .progress-color-blue{
+            color: #80a8cc;
+        }
+
+        /* copyright */
+        .copyright-wrapper {
+            background-color: #4d4e59;
+            height: 100px;
+        }
+
+        .copyright-content {
+            color: #d4d2d0;
+            margin-top: 35px;
+        }
+
+        .pull-left {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-wrapper nav">
+    <div class="grid">
+        <div class="grid-cell">
+            <img src="img/logo.png" class="nav-logo" alt="logo">
+            <ul class="navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Apply As Tutor</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Why Education</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+            <div class="pull-left">
+                <button class="btn-donate"><b>Donate</b></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid" style="height: 794px">
+    <div class="grid-cell">
+        <div class="hero-header header-font">ONLINE TUTORING.ALWAYS FREE AND AVAILABLE.</div>
+        <button class="btn-student btn-large">I'M A STUDENT</button>
+        <button class="btn-tutor btn-large">I'M A TUTOR</button>
+    </div>
+    <div class="img-hero"></div>
+    <div class="overlay-img"></div>
+</div>
+<div class="grid">
+    <div class="grid-cell">
+        <div class="mission-header header-font">MISSION</div>
+        <div class="mission-content">The Learn To Be Foundation is on a mission to provide 100% free, 1-on-1,<br/>
+            online tutoring to students everywhere.
+        </div>
+        <button class="mission-btn btn-large">Donate</button>
+    </div>
+</div>
+<div class="grid" style="background-color: #91d0b1">
+    <div class="grid-cell">
+        <img class="students-img" src="img/1.png" alt="1.png">
+        <div class="text-left">
+            <div class="students-header header-font">STUDENTS</div>
+            <div class="students-content">We offer students 100% free online tutoring almost 24 hours a day.Struggling
+                with a homework problem?Don't understand a concept you're learning?Don't worry,we've got you.
+            </div>
+            <button class="students-btn btn-large">Donate</button>
+        </div>
+    </div>
+</div>
+<div class="grid" style="background-color: #ffcd62">
+    <div class="grid-cell">
+        <img class="tutors-img" src="img/2.png" alt="2.png">
+        <div class="tutors-wrapper">
+            <div class="tutors-header header-font">PROSPECTIVE TUTORS</div>
+            <div class="tutors-content">Join our team of over 600 tutors who are dedicated to providing individualized
+                attention to students around the world.Tutor at your convenience and make a real impact.
+            </div>
+            <button class="tutors-btn btn-large">Join Us</button>
+        </div>
+    </div>
+</div>
+<div class="grid" style="background-color: #80a8cc">
+    <div class="grid-cell">
+        <img class="partners-img" src="img/3.png" alt="3.png">
+        <div class="text-left">
+            <div class="partners-header header-font">PARTNERS</div>
+            <div class="partners-content">We are dedicated to partnering with schools and organizations that help to
+                further our mission of providing individualized online tutoring to kids living in underserved
+                communities.
+            </div>
+            <button class="partners-btn btn-large">Help Us</button>
+        </div>
+    </div>
+</div>
+<div class="grid" style="background-color: #ffffff">
+    <div class="grid-cell">
+        <div class="progress-header header-font">OUR PROGRESS</div>
+        <div class="progress-cell progress-color-green">
+            <div class="progress-cell-header header-font">13,000</div>
+            <div class="progress-cell-content">Hours Tutored</div>
+        </div>
+        <div class="progress-cell progress-color-yellow">
+            <div class="progress-cell-header header-font">25,000</div>
+            <div class="progress-cell-content">Sessions Hosted</div>
+        </div>
+        <div class="progress-cell progress-color-blue">
+            <div class="progress-cell-header header-font">600</div>
+            <div class="progress-cell-content">Volunteer Tutors</div>
+        </div>
+    </div>
+</div>
+<footer class="grid copyright-wrapper">
+    <div class="grid-cell">
+        <div class="copyright-content">©Learn To Be 2014</div>
+    </div>
+</footer>
+</body>
+</html>
